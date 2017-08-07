@@ -15,17 +15,17 @@ func countLines( fileNames []string ) {
 
 		buffer, err := ioutil.ReadFile( value )
 
-    	if err != nil {
+    		if err != nil {
 
-    		fmt.Println( "No such file or directory." )
+    			fmt.Println( "No such file or directory." )
 
-    	} else {
+    		} else {
 
-    		currentSize := bytes.Count( buffer, []byte{ '\n' } )
-    		totalSize += currentSize
-    		fmt.Println( value, currentSize )
+    			currentSize := bytes.Count( buffer, []byte{ '\n' } )
+    			totalSize += currentSize
+    			fmt.Println( value, currentSize )
     	
-    	}
+    		}
 	}
 
 	if len( fileNames ) > 1 {
